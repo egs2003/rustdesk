@@ -564,6 +564,7 @@ class App: Reactor.Component
                         </div>
                         <PasswordArea />
                     </div>
+                    {!is_win || handler.is_installed() ? "": <InstallMe />}
                     {software_update_url ? <UpdateMe /> : ""}
                     {is_win && handler.is_installed() && !software_update_url && handler.is_installed_lower_version() ? <UpgradeMe /> : ""}
                     {is_can_screen_recording ? "": <CanScreenRecording />}
